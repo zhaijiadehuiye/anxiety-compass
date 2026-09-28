@@ -1,0 +1,53 @@
+{
+  "assessmentRecord": {
+    "id": "uuid",
+    "createdAt": "ISO-8601 timestamp",
+    "scaleRecords": {
+      "gad7": {
+        "answers": [0, 1, 2, 3, 0, 1, 2],
+        "score": 9,
+        "maxScore": 21,
+        "band": "轻度",
+        "bandIndex": 1
+      },
+      "phq9": {
+        "answers": [0, 1, 2, 0, 1, 0, 2, 1, 0],
+        "score": 7,
+        "maxScore": 27,
+        "band": "轻度",
+        "bandIndex": 1
+      }
+    },
+    "profile": {
+      "triggers": ["work", "future"],
+      "times": ["bedtime"],
+      "avoid": "sometimes",
+      "sleep": "some",
+      "relax": "sometimes",
+      "note": "用户自填备注"
+    },
+    "storage": "device-local"
+  },
+  "scaleDefinition": {
+    "key": "gad7",
+    "name": "广泛性焦虑量表-7",
+    "englishName": "GAD-7",
+    "period": "过去两周",
+    "questions": [],
+    "options": [],
+    "maxScore": 21,
+    "bands": [],
+    "source": "原始研究与授权记录",
+    "version": "当前配置版本",
+    "language": "zh-CN",
+    "licenseStatus": "unknown",
+    "enabled": true
+  },
+  "interaction": {
+    "numberKeys": "1..optionCount selects the official ordered option",
+    "spaceOrEnter": "advances after an answer",
+    "arrowLeft": "returns to the previous question",
+    "music": "optional user-provided music; off by default"
+  },
+  "notes": "正式量表题目、选项、时间范围和计分与补充画像分开保存。每种量表单独追踪，不换算成统一指数。正式上线前应为每个量表确认中文版本来源、版权与商业授权。"
+}

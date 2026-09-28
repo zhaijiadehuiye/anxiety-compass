@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="心安筛查：以经验证量表为核心，帮助你观察近期心理状态与变化。" />
+<title>心安筛查｜心理状态自我观察</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%232f6f5e'/%3E%3Cpath d='M15 37c8-15 14-15 18-1 4 14 10 14 16-9' fill='none' stroke='%23e6f4c8' stroke-width='6' stroke-linecap='round'/%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<div class="noise" aria-hidden="true"></div>
+<header class="topbar">
+  <a class="brand" href="#home" aria-label="心安筛查首页"><span class="brand-mark"><span></span></span><span>心安筛查</span></a>
+  <nav class="nav" aria-label="主导航">
+    <button class="nav-link active" data-view="home">首页</button>
+    <button class="nav-link" data-view="choose">开始筛查</button>
+    <button class="nav-link" data-view="history">我的趋势</button>
+    <button class="nav-link" data-view="learn">心理自助</button>
+    <button class="nav-link" data-view="resources">心理资源</button>
+    <button class="nav-link" data-view="science">科学依据</button>
+    <button class="nav-link" data-view="privacy">隐私说明</button>
+  </nav>
+  <div class="top-actions"><button class="music-btn" id="music-toggle" aria-pressed="false" title="背景音乐会自动尝试播放；点击可静音">♫ <span>自动音乐</span></button></div>
+</header>
+
+<main>
+<section class="view active" id="home-view">
+  <div class="hero-grid">
+    <div class="hero-copy">
+      <div class="eyebrow"><span class="pulse-dot"></span> 2–8 分钟 · 仅供自我观察</div>
+      <h1>先听见<br /><em>自己的状态。</em></h1>
+      <p class="hero-lede">用经过研究验证的自评量表，了解最近两周的焦虑、情绪和生活影响。没有“正常答案”，只需要如实回答。</p>
+      <div class="hero-actions">
+        <button class="primary-btn" data-action="start-quick">2分钟快速看看 <span>→</span></button>
+        <button class="text-btn" data-action="start-full">8分钟完整检查 <span>↗</span></button>
+      </div>
+      <div class="trust-row"><span><i class="mini-icon">⌁</i> 标准量表与原版计分</span><span><i class="mini-icon">◷</i> 默认仅保存在本机</span><span><i class="mini-icon">♡</i> 结果不是诊断</span></div>
+    </div>
+    <div class="hero-card-wrap">
+      <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+      <div class="hero-card">
+        <div class="card-top"><span class="mono-label">YOUR CHECK-IN</span><span class="status-chip"><span></span> 私密</span></div>
+        <div class="orbital-art"><div class="orbital-core">安</div><div class="orbit-line line-a"></div><div class="orbit-line line-b"></div><span class="spark spark-a">✦</span><span class="spark spark-b">·</span></div>
+        <div class="card-question">今天，先从一个问题开始</div>
+        <div class="weather-row"><span>焦虑</span><span>情绪</span><span class="selected">状态</span><span>睡眠</span></div>
+        <div class="card-foot"><span>这不是诊断</span><span>一题一屏 →</span></div>
+      </div>
+      <div class="floating-note note-one"><strong>3</strong><span>个核心量表<br />按需组合</span></div>
+      <div class="floating-note note-two"><span class="check">✓</span><span>你的回答<br />只在此设备</span></div>
+    </div>
+  </div>
+
+  <div class="home-entry">
+    <div class="section-kicker">从你正在经历的事情开始</div>
+    <div class="entry-grid">
+      <article class="entry-card entry-card-primary" data-action="start-quick"><div class="entry-icon">◌</div><div><span class="entry-label">快速入口 · 约 2 分钟</span><h2>2分钟快速看看</h2><p>先用 GAD-7 快速了解最近两周的焦虑症状，不做疾病诊断。</p><span class="entry-link">开始快速筛查 <b>→</b></span></div></article>
+      <article class="entry-card" data-action="start-full"><div class="entry-icon">✦</div><div><span class="entry-label">完整入口 · 约 8 分钟</span><h2>8分钟完整检查</h2><p>使用 GAD-7 + PHQ-9 + OASIS，并加入生活影响和补充画像。</p><span class="entry-link">开始完整检查 <b>→</b></span></div></article>
+      <article class="entry-card" data-action="start-gad7"><div class="entry-icon">〰</div><div><span class="entry-label">如果你总是紧绷</span><h2>我最近是不是很焦虑？</h2><p>先看看最近两周是否经常紧张、担忧、难以放松。</p><span class="entry-link">使用 GAD-7 <b>→</b></span></div></article>
+      <article class="entry-card" data-action="start-oasis"><div class="entry-icon">↗</div><div><span class="entry-label">如果生活被打乱</span><h2>焦虑已经影响我的生活了吗？</h2><p>关注回避、工作学习、社交和享受生活的变化。</p><span class="entry-link">使用 OASIS <b>→</b></span></div></article>
+      <article class="entry-card" data-action="open-history"><div class="entry-icon">⌁</div><div><span class="entry-label">已经测过几次</span><h2>查看我的变化</h2><p>按同一量表分别看趋势，了解变化而不是追逐一次分数。</p><span class="entry-link">打开趋势 <b>→</b></span></div></article>
+    </div>
+  </div>
+  <div class="home-lower"><div class="section-kicker">为什么值得相信</div><div class="science-strip"><div><strong>标准量表负责科学性</strong><p>题目、时间范围、选项和计分独立保存，保持原版口径。</p></div><div><strong>补充画像负责个性化</strong><p>用你的自我报告理解触发因素，不把它伪装成临床指标。</p></div><div><strong>趋势和解释负责长期价值</strong><p>同一量表单独追踪，帮助你决定下一步是否需要支持。</p></div></div></div>
+</section>
+
+<section class="view" id="choose-view">
+  <div class="simple-shell">
+    <div class="page-intro compact"><div><div class="eyebrow"><span class="pulse-dot"></span> 开始筛查</div><h1>从你关心的事，<br /><em>选一个入口。</em></h1><p>不用先认识量表名称。先说你想了解什么，我们再告诉你使用了哪套专业工具。</p></div></div>
+    <div class="entry-grid entry-grid-large">
+      <article class="entry-card entry-card-primary" data-action="start-quick"><div class="entry-icon">◌</div><div><span class="entry-label">约 2 分钟 · GAD-7</span><h2>快速看看最近的焦虑</h2><p>先用一套核心量表了解过去两周的焦虑症状。</p><span class="entry-link">开始快速筛查 <b>→</b></span></div></article>
+      <article class="entry-card" data-action="start-full"><div class="entry-icon">✦</div><div><span class="entry-label">约 8 分钟 · 三套核心工具</span><h2>完整心理状态检查</h2><p>GAD-7 + PHQ-9 + OASIS，再加上生活影响和补充画像。</p><span class="entry-link">开始完整检查 <b>→</b></span></div></article>
+      <article class="entry-card" data-action="start-gad7"><div class="entry-icon">〰</div><div><span class="entry-label">使用的专业量表：GAD-7</span><h2>我最近是不是很焦虑？</h2><p>快速了解紧张、担忧、烦躁、坐立不安和难以放松。</p><span class="entry-link">开始焦虑筛查 <b>→</b></span></div></article>
+      <article class="entry-card" data-action="start-oasis"><div class="entry-icon">↗</div><div><span class="entry-label">使用的专业量表：OASIS</span><h2>焦虑已经影响我的生活了吗？</h2><p>关注回避、工作学习、社交和生活功能影响。</p><span class="entry-link">开始功能影响筛查 <b>→</b></span></div></article>
+    </div>
+    <div class="more-scales"><div class="more-scales-head"><div><span class="section-kicker">更多专项筛查</span><h2>按你的需要选择</h2></div><p>专项工具仅用于自我观察；正式使用前请查看科学依据与授权状态。</p></div><div class="scale-grid" id="scale-grid"></div></div>
+    <div class="scale-disclaimer"><span class="info-dot">i</span> 这是为了帮助你选择更合适的自我筛查工具，不是在进行自动诊断。</div>
+  </div>
+</section>
+
+<section class="view" id="guide-view">
+  <div class="simple-shell guide-shell">
+    <div class="page-intro compact"><div><div class="eyebrow"><span class="pulse-dot"></span> 选择助手</div><h1>说说最近最困扰你的，<br /><em>不必先懂量表。</em></h1><p>这 3 个问题只是帮你选入口，不会自动诊断，也不会改变正式量表的计分。</p></div></div>
+    <div class="guide-step" id="guide-step"></div>
+    <div class="guide-actions"><button class="text-btn" data-view="choose">跳过，直接看量表 <span>↗</span></button><button class="primary-btn" id="guide-next" disabled>继续 <span>→</span></button></div>
+  </div>
+</section>
+
+<section class="view" id="checkin-view">
+  <div class="assessment-shell">
+    <div class="assessment-header"><button class="back-btn" data-view="choose">← 返回</button><div class="assessment-title"><span class="mono-label"><span id="scale-name">GAD-7</span> / SELF CHECK</span><span id="step-label">第 1 / 7 题</span></div><button class="quit-btn" id="quit-btn">退出</button></div>
+    <div class="progress-track"><div class="progress-fill" id="progress-fill"></div></div>
+    <div class="assessment-section-label" id="assessment-section-label">正式量表 · 使用原版题目与计分</div>
+    <div class="assessment-layout"><aside class="assessment-aside"><div class="aside-orb"><span id="orb-emoji">🌿</span></div><p class="aside-caption" id="aside-caption">慢一点回答<br />也没有关系。</p><div class="aside-rule"></div><p class="aside-note">以下问题来自<br /><strong id="aside-instrument">GAD-7</strong> 量表结构。<br />请回想<span id="aside-period">过去两周</span>。</p></aside>
+      <div class="question-panel"><div class="question-meta"><span id="question-period">过去两周</span><span class="question-badge">单选</span></div><h2 id="question-text">感觉紧张、焦虑或急切</h2><p class="question-hint" id="question-hint">请根据最近的真实感受选择最贴近的一项。</p><div class="answer-list" id="answer-list"></div><div class="question-footer"><span class="keyboard-hint" id="keyboard-hint">按 1–4 快速选择 · 空格继续</span><button class="next-btn" id="next-btn" disabled>继续 <span>→</span></button></div></div>
+    </div>
+    <div class="scale-footnote"><span class="info-dot">i</span> 正式量表结束后，你可以选择填写补充画像；补充画像不计入标准量表得分。</div>
+  </div>
+</section>
+
+<section class="view" id="profile-view">
+  <div class="simple-shell profile-shell">
+    <div class="profile-head"><div><div class="eyebrow"><span class="pulse-dot"></span> 补充画像 · 可跳过</div><h1>让结果更贴近<br /><em>你的生活。</em></h1><p>以下问题用于帮助你理解近期状态，不计入标准量表得分，也不属于医学诊断指标。</p></div><span class="profile-status">不影响正式分数</span></div>
+    <div class="profile-grid">
+      <fieldset><legend>最近焦虑主要与什么有关？<small>可多选</small></legend><div class="chip-grid" id="trigger-options"></div></fieldset>
+      <fieldset><legend>焦虑最容易出现在哪些时间？<small>可多选</small></legend><div class="chip-grid" id="time-options"></div></fieldset>
+      <fieldset><legend>最近是否因为焦虑回避某些事情？</legend><div class="choice-row" id="avoid-options"></div></fieldset>
+      <fieldset><legend>最近睡眠是否明显受到影响？</legend><div class="choice-row" id="sleep-options"></div></fieldset>
+      <fieldset><legend>是否感觉长期无法放松？</legend><div class="choice-row" id="relax-options"></div></fieldset>
+      <fieldset class="profile-note-field"><legend>给这次记录留一句备注<small>只保存在本设备</small></legend><textarea id="profile-note" rows="3" placeholder="例如：最近换了工作，睡前更容易担心……"></textarea></fieldset>
+    </div>
+    <div class="profile-actions"><button class="text-btn" id="skip-profile">跳过补充画像 <span>→</span></button><button class="primary-btn" id="finish-profile">查看结果 <span>→</span></button></div>
+  </div>
+</section>
+
+<section class="view" id="result-view">
+  <div class="result-shell">
+    <div class="result-header"><button class="back-btn" data-view="home">← 心安筛查</button><span class="mono-label">YOUR CHECK-IN / <span id="result-date">今天</span></span><button class="text-btn" data-view="history">查看趋势 <span>↗</span></button></div>
+    <div class="result-intro"><div><div class="eyebrow"><span class="pulse-dot"></span> 本次筛查结果</div><h1 id="result-headline">这是一次关于近期状态的快照。</h1><p id="result-disclaimer">筛查结果用于自我观察，不等同于医学诊断。</p></div><div class="result-summary-grid" id="result-summary-grid"></div></div>
+    <article class="result-meaning-card"><div class="card-heading"><span class="section-kicker">结果是什么意思？</span><span class="lock-tag">如何理解分数</span></div><div id="result-meaning-list"></div></article>
+    <div class="safety-banner" id="safety-banner" hidden><span class="support-icon">♡</span><div><strong>你提到近期出现过与死亡或伤害自己有关的想法</strong><p>单独这一项不能判断你是否存在迫在眉睫的危险，但这个信号值得认真对待。如果你现在担心自己可能伤害自己，请立即联系当地紧急服务、心理援助热线，或尽快告诉一位你信任的人。</p><div class="hotline-row">全国统一心理援助热线：<b>12356</b>　紧急情况：<b>120 / 110</b></div></div></div>
+    <div class="result-sections">
+      <article class="result-card result-section-card"><div class="card-heading"><span class="section-kicker">主要表现</span><span class="lock-tag">按题目回答整理</span></div><div class="manifestation-list" id="manifestation-list"></div></article>
+      <article class="result-card result-section-card"><div class="card-heading"><span class="section-kicker">功能影响</span><span class="lock-tag">自我报告</span></div><div id="function-impact"></div></article>
+      <article class="result-card result-section-card"><div class="card-heading"><span class="section-kicker">触发画像</span><span class="lock-tag">不计入标准分</span></div><p class="result-muted">这一部分来自你的自我报告，用于辅助理解，不属于疾病诊断。</p><div id="trigger-summary"></div></article>
+      <article class="result-card result-section-card next-steps"><div class="card-heading"><span class="section-kicker">下一步建议</span><span class="sparkle">✦</span></div><p id="result-advice"></p><button class="secondary-btn" data-view="learn">看看可能有帮助的方法 <span>→</span></button></article>
+    </div>
+    <article class="doctor-report" id="doctor-report"><div class="doctor-report-head"><div><span class="section-kicker">给医生看的报告</span><h2>近期心理状态筛查摘要</h2></div><span class="report-badge">患者自填 · 非诊断</span></div><div id="doctor-report-body"></div></article>
+    <div class="result-actions"><button class="primary-btn" id="save-result-btn">保存到本设备 <span>↓</span></button><button class="secondary-btn" id="print-report-btn">打印 / 保存 PDF <span>↗</span></button><button class="text-btn" id="restart-btn">重新筛查 <span>↻</span></button></div>
+  </div>
+</section>
+
+<section class="view" id="history-view">
+  <div class="simple-shell history-shell"><div class="page-intro"><div><div class="eyebrow"><span class="pulse-dot"></span> 仅保存在此设备</div><h1>你的状态，<br /><em>按同一量表慢慢看。</em></h1><p>不同量表各自记录，不换算成一个“焦虑指数”。这样每次比较才有清楚的含义。</p></div><div class="intro-action"><button class="primary-btn" data-action="start-full">记录一次完整检查 <span>→</span></button></div></div><div id="history-groups"></div><div class="history-empty" id="history-empty"></div><div class="history-foot"><span class="info-dot">i</span> 测试记录默认只保存在当前浏览器。<button class="text-btn delete-btn" id="delete-history">一键删除全部历史记录</button></div></div>
+</section>
+
+<section class="view" id="learn-view">
+  <div class="simple-shell narrow learn-shell"><div class="page-intro compact"><div><div class="eyebrow"><span class="pulse-dot"></span> 心理自助 · 选一个当下能做的小步骤</div><h1>不必一下解决全部，<br /><em>先找到下一步。</em></h1><p>这些练习给你多一些选择：让身体安定、整理担忧、改善睡前节奏、减少回避，或找人一起面对。效果因人而异，任何一步都可以跳过或停止。</p></div></div><div class="learn-intro-strip"><span>从最接近你现在需要的方向开始</span><span>不计分 · 可跳过 · 约 2–5 分钟</span></div><div class="learn-grid" id="learn-grid"></div><div class="learn-source"><span>内容参考 WHO 压力管理指南及 NIMH 心理治疗资料，按短练习形式整理。</span><a href="https://www.who.int/publications-detail-redirect/9789240003927" target="_blank" rel="noreferrer">查看 WHO 指南 ↗</a><a href="https://www.nimh.nih.gov/health/topics/psychotherapies" target="_blank" rel="noreferrer">查看 NIMH 资料 ↗</a></div><div class="support-banner learn-support"><span class="support-icon">♡</span><div><strong>如果你现在担心自己可能受伤</strong><p>先联系身边可信任的人，或当地心理援助热线；紧急情况下联系 120 / 110。</p></div></div></div>
+</section>
+
+<section class="view" id="resources-view">
+  <div class="simple-shell resource-shell"><div class="page-intro compact"><div><div class="eyebrow"><span class="pulse-dot"></span> 心理资源中心</div><h1>多一些了解，<br /><em>少一点独自判断。</em></h1><p>这里整理心理健康筛查和科普入口。已整合的内容使用独立的中文页面；其他工具先提供原创介绍和原始来源，避免把未经确认的题目当成正式测试。</p></div></div><div class="resource-note"><strong>MHA 是什么？</strong><p>Mental Health America 是美国的全国性非营利心理健康组织，不是美国政府部门。它的在线筛查也不是诊断工具。</p><a href="https://screening.mhanational.org/about-our-mental-health-tests/" target="_blank" rel="noreferrer">查看 MHA 测试说明 ↗</a></div><div class="resource-section-head"><span class="section-kicker">可以在心安筛查完成</span><h2>核心筛查</h2></div><div class="resource-grid"><article class="resource-card resource-card-ready"><span class="resource-state">已整合 · 原版结构</span><h3>GAD-7 焦虑筛查</h3><p>了解过去两周的紧张、担忧、难以放松等焦虑症状。</p><div><button class="secondary-btn" data-action="start-quick">开始筛查 <span>→</span></button><a href="https://screening.mhanational.org/screening-tools/anxiety/" target="_blank" rel="noreferrer">参考 MHA Anxiety Test ↗</a></div></article><article class="resource-card resource-card-ready"><span class="resource-state">已整合 · 原版结构</span><h3>PHQ-9 情绪筛查</h3><p>了解低落、兴趣、精力、睡眠等近期情绪症状，并保留第 9 题安全逻辑。</p><div><button class="secondary-btn" data-action="start-full">加入完整检查 <span>→</span></button><a href="https://screening.mhanational.org/screening-tools/depression/" target="_blank" rel="noreferrer">参考 MHA Depression Test ↗</a></div></article></div><div class="resource-section-head resource-section-head-spaced"><span class="section-kicker">更多方向 · 原创介绍与原始入口</span><h2>按主题了解</h2></div><div class="resource-grid resource-grid-more"><article class="resource-card"><span class="resource-icon">◎</span><h3>注意力与执行困难</h3><p>了解成人 ADHD 筛查通常关注的注意力、记忆、任务完成和坐立不安表现。</p><a href="https://screening.mhanational.org/screening-tools/adhd/" target="_blank" rel="noreferrer">查看原始工具入口 ↗</a></article><article class="resource-card"><span class="resource-icon">↺</span><h3>重复想法与行为</h3><p>了解侵入性想法、反复检查、清洗、计数和秩序需求之间的区别。</p><a href="https://screening.mhanational.org/screening-tools/ocd/" target="_blank" rel="noreferrer">查看 OCD 工具入口 ↗</a></article><article class="resource-card"><span class="resource-icon">◌</span><h3>创伤后反应</h3><p>了解创伤经历后可能出现的回避、警觉、重现和情绪变化。</p><a href="https://screening.mhanational.org/screening-tools/ptsd/" target="_blank" rel="noreferrer">查看 PTSD 工具入口 ↗</a></article><article class="resource-card"><span class="resource-icon">♡</span><h3>社交情境压力</h3><p>了解在被评价、表达、见人或公开场合中出现的持续紧张和回避。</p><a href="https://screening.mhanational.org/screening-tools/social-anxiety/" target="_blank" rel="noreferrer">查看社交焦虑入口 ↗</a></article><article class="resource-card"><span class="resource-icon">✦</span><h3>情绪波动与精力变化</h3><p>了解双相相关筛查为何需要专业评估，避免把普通情绪变化直接当成诊断。</p><a href="https://screening.mhanational.org/screening-tools/bipolar/" target="_blank" rel="noreferrer">查看双相工具入口 ↗</a></article><article class="resource-card"><span class="resource-icon">+</span><h3>进食、成瘾与其他主题</h3><p>包含进食问题、物质使用、赌博、产后情绪、青少年和家庭支持等方向。</p><a href="https://screening.mhanational.org/screen-collection/universal-mental-health-screening/" target="_blank" rel="noreferrer">查看 MHA 工具集合 ↗</a></article></div><div class="resource-section-head resource-section-head-spaced"><span class="section-kicker">站内科普 · 原创中文整理</span><h2>先读懂，再决定下一步</h2><p class="resource-section-lede">文章直接在心安筛查内打开。内容根据公开资料重新组织，不是外部页面的逐字翻译；每篇都保留来源与进一步阅读。</p></div><div class="article-library" id="article-library"></div></div>
+</section>
+
+<section class="view" id="articles-view">
+  <div class="simple-shell article-shell">
+    <div class="article-toolbar"><button class="back-btn" data-view="resources">← 返回心理资源</button><span class="mono-label">READ / 心理科普</span></div>
+    <article class="article-reader" id="article-reader" aria-live="polite"></article>
+  </div>
+</section>
+
+<section class="view" id="science-view">
+  <div class="simple-shell science-shell"><div class="page-intro compact"><div><div class="eyebrow"><span class="pulse-dot"></span> 科学依据</div><h1>量表与计分说明，<br /><em>清楚地看见自己的状态。</em></h1><p>心安筛查使用经过研究验证的自评工具帮助你观察近期症状和变化。正式量表的题目、时间范围、选项与计分方式按各自原版结构呈现。</p></div></div><div class="science-table" id="science-table"></div><div class="scoring-panel"><div class="scoring-panel-head"><span class="section-kicker">量表与计分说明</span><p>分数区间用于理解近期状态，不等同于医学诊断。</p></div><div class="scoring-grid" id="scoring-grid"></div></div></div>
+</section>
+
+<section class="view" id="privacy-view">
+  <div class="simple-shell narrow"><div class="page-intro compact"><div><div class="eyebrow"><span class="pulse-dot"></span> 透明说明</div><h1>知道边界，<br /><em>才更安心。</em></h1><p>这里说明它能做什么、不能做什么，以及你的数据去了哪里。</p></div></div><div class="privacy-grid"><article><span class="privacy-num">01</span><h2>这是筛查，不是诊断</h2><p>正式量表保持原版题目、时间范围、选项和计分。结果只提示近期症状水平，不能确认你是否患有某种疾病。</p></article><article><span class="privacy-num">02</span><h2>默认只保存在本机</h2><p>不要求注册，不收集姓名、联系方式或身份信息。历史、备注和补充画像默认写入当前浏览器，不上传服务器，不用于训练 AI。</p></article><article><span class="privacy-num">03</span><h2>你可以删除</h2><p>随时在“我的趋势”页面一键删除全部本地记录。清除浏览器站点数据也会删除这些记录。</p><button class="secondary-btn" id="privacy-delete">删除本机记录 <span>×</span></button></article><article class="urgent"><span class="privacy-num">04</span><h2>如果你正处于危机</h2><p>本工具不做危机自动判断。如果你无法保证安全，请立即联系当地紧急服务或心理援助热线。</p></article></div><div class="privacy-actions"><button class="primary-btn" data-view="home">回到首页 <span>→</span></button><button class="text-btn" data-view="science">查看量表来源与授权 <span>↗</span></button></div></div>
+</section>
+</main>
+<audio id="bg-music" src="music.mp3" loop preload="metadata" autoplay></audio>
+<div class="exercise-backdrop" id="exercise-backdrop" hidden></div>
+<section class="exercise-dialog" id="exercise-dialog" role="dialog" aria-modal="true" aria-labelledby="exercise-title" hidden><button class="exercise-close" id="exercise-close" aria-label="关闭练习">×</button><div class="exercise-dialog-inner"><div class="exercise-kicker" id="exercise-kicker">2 分钟 · 当下安定</div><h2 id="exercise-title"></h2><p class="exercise-lede" id="exercise-lede"></p><div class="exercise-progress"><span id="exercise-step-label">第 1 步</span><div><i id="exercise-progress-fill"></i></div></div><article class="exercise-step-card"><span id="exercise-step-number">01</span><p id="exercise-step-text"></p><small id="exercise-step-tip"></small></article><div class="exercise-actions"><button class="text-btn" id="exercise-prev">上一步</button><button class="primary-btn" id="exercise-next">下一步 <span>→</span></button></div><p class="exercise-footer" id="exercise-footer">如感到不舒服，可以停下、睁开眼睛，或换一个更适合你的方法。</p></div></section>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="scale-definitions.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
